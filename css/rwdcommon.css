@@ -83,6 +83,17 @@
 
     /* 푸터구역 */
     .comInfo .info span {  display:block; line-height:1.8em  }
-    .comInfo .info span:before { display:none   }    
+    .comInfo .info span:before { display:none   }   
+    
+    .footerMenu { background:#fff;
+        color:#333; padding:0px }
+    .footerMenu .row { padding:0px 1px}    
+    .footerMenu a { padding-left:0px; display:block; padding:10px 0px; 
+        border:1px solid #000; border-bottom:none;    
+    }  
+    .footerMenu a:before { display:none;    }  
+    .footerMenu a:first-child:before { 
+        display:none }
+    
 
 }

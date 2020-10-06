@@ -142,7 +142,7 @@ text-align:center }
  }
 .act ul li div a:hover { 
     color:#212529; background-color:#f8f9fa }
-
+.act ul li div a i { display:none }
 
 .curriInfo { padding:84px 0 }
 .curriBox > .column { float:left; width:31.66% }
@@ -204,15 +204,15 @@ text-align:center }
 
 .bestChoice { background:url(../images/main-bottomBanner.min.jpg) no-repeat;
     background-size:cover;  
-    height:160px; line-height:160px; 
+    height:160px; 
     background-attachment: fixed;
     background-position:center; 
     font-size:19.25px; color:#fff;
     text-align:center; 
     font-weight:bold; position:relative }
 .bestChoice .overlay { position:absolute; 
-    top:0; left:0; right:0; bottom:0;
-    background:rgba(0,0,0,0.4);  }  
+    top:0; left:0; right:0; bottom:0; 
+    background:rgba(0,0,0,0.5);  line-height:160px; }  
 
 .csNnotice { background:#f5f5f5; padding:84px 0;
     color:#333 }

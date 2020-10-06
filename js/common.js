@@ -4,21 +4,23 @@
  var flag = true;
  function init() {
   var ww = $(window).width()
-  if ( ww>767 && flag ) {
-     $('.logoNav .nav').show()
-     $('.depth1 > li').removeClass('on')
-     $('.open_nav, .close_nav, .depth2').hide()
+  if ( ww>767 ) {
      $('html').addClass('pc').removeClass('mobile')
-     flag = false
-  } else if ( ww<=767 && !flag ) {
-     $('.open_nav').show()
-     $('.logoNav .nav, .depth2').hide()
-     $('html').addClass('mobile').removeClass('pc')
-     flag = true
+     if ( flag ) {
+      $('.logoNav .nav').show()
+      $('.depth1 > li').removeClass('on')
+      $('.open_nav, .close_nav, .depth2').hide()
+      flag = false
+     }
+  } else if ( ww<=767 ) {
+    $('html').addClass('mobile').removeClass('pc')
+    if (!flag) {
+      $('.open_nav').show()
+      $('.logoNav .nav, .depth2').hide()
+      flag = true
+    }
   }
 }
-
-init()
 
 $(window).on('resize', function(){
   init()
