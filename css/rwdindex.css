@@ -59,7 +59,7 @@
     .act ul li div a span { text-indent:-9999px; overflow:hidden; 
         display:inline-block; width:0px; height:0px; }
     .act ul li div a:hover { 
-        color:#212529; background-color:#f8f9fa }    
+        color:#212529; background-color:#fff; all:initial }    
     .act ul li div a i {display:inline-block; position:absolute; top:10px; right:0;
         font-size:25px; 
     }    
