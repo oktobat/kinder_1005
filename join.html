@@ -103,3 +103,33 @@
             </div>
         </section>
 </div>
+
+<script>
+
+(function($){
+
+    var flagJoin = true
+    initJoin()
+    function initJoin() {
+        if ( $('html').hasClass('mobile') && flagJoin ) {
+            $('.gender_area label, .hobby_area label').after('<br>')
+            $('#addr1').attr({ placeholder:'도로명 주소' })
+            $('#addr2').attr({ placeholder:'지번 주소' })
+            $('#addr3').attr({ placeholder:'나머지 주소' })
+            flagJoin=false 
+        } else if ( $('html').hasClass('pc') && !flagJoin ) {
+            $('.gender_area, .hobby_area').find('br').remove()
+            $('#addr1').attr({ placeholder:'' })
+            $('#addr2').attr({ placeholder:'' })
+            $('#addr3').attr({ placeholder:'' })
+            flagJoin=true
+        }
+    }
+
+    $(window).resize(function(){
+        initJoin()
+    })
+
+})(jQuery)
+
+</script>

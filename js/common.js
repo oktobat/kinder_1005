@@ -1,24 +1,32 @@
 (function ($) {
 
+  var deviceSize = 767;
+  function scrollOX(status) {
+    $('html').css({
+      overflowY:status
+    })
+    var htmlWidth = $('html').width()
+    return htmlWidth
+  }
+  var swh = scrollOX('hidden'),  
+  sws = scrollOX('scroll'),  
+  swd = swh - sws;
+  if ( swd > 0 ) {
+    deviceSize = deviceSize - swd
+  }
+ 
  init()
- var flag = true;
  function init() {
   var ww = $(window).width()
-  if ( ww>767 ) {
+  if ( ww>deviceSize && !$('html').hasClass('pc') ) {
      $('html').addClass('pc').removeClass('mobile')
-     if ( flag ) {
-      $('.logoNav .nav').show()
-      $('.depth1 > li').removeClass('on')
-      $('.open_nav, .close_nav, .depth2').hide()
-      flag = false
-     }
-  } else if ( ww<=767 ) {
-    $('html').addClass('mobile').removeClass('pc')
-    if (!flag) {
-      $('.open_nav').show()
-      $('.logoNav .nav, .depth2').hide()
-      flag = true
-    }
+     $('.logoNav .nav').show()
+     $('.depth1 > li').removeClass('on')
+     $('.open_nav, .close_nav, .depth2').hide()
+  } else if ( ww<=deviceSize && !$('html').hasClass('mobile') ) {
+     $('html').addClass('mobile').removeClass('pc')
+     $('.open_nav').show()
+     $('.logoNav .nav, .depth2').hide()
   }
 }
 

@@ -55,7 +55,7 @@
         border-radius: 3px;  color: #f8f9fa;
         border:0px solid #f8f9fa; 
         letter-spacing:0.5px;
-        transition:all 0.5s;  }
+        transition:all 0.5s; all:initial }
     .act ul li div a span { text-indent:-9999px; overflow:hidden; 
         display:inline-block; width:0px; height:0px; }
     .act ul li div a:hover { 

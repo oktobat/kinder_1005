@@ -44,3 +44,24 @@
 
 
 
+@media screen and (max-width:767px) {
+    .join_form .tit_lbl { display:block; width:100%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:20px;  }
+    .join_form .info_content { display:block; width:100%; }
+
+    .join_form .w320 { width:90% }
+    .join_form .w160 { width:90% }
+    .join_form #addr_lbl { width:160px }
+    .join_form .w70p { width:90% }
+    .join_form  #addr1 ~ span { display:none }
+    .join_form .info_content textarea {
+        height: 245px; width:90%;
+        border:1px solid #ccc; 
+        /* textarea는 글꼴 관련 스타일을 상위태그에서 상속받지 못함 */
+        font-size: 15px; letter-spacing: -1px;
+        color: #444; padding: 10px; line-height: 1.5;
+        resize:none; }
+    .join_form #email_lbl + span { display:block }
+    .join_form .gender_area,
+    .join_form .hobby_area { padding-left:20px }
+
+}
